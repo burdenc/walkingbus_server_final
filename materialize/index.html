@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Walking Bus</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+
+  <ul id="user-dropdown" class="dropdown-content">
+    <li><a href="prefs.html">Settings</a></li>
+    <li><a class="signout" href="#!">Sign Out</a></li>
+  </ul>
+  <nav>
+    <div class="nav-wrapper walking-bus-nav">
+      <a href="index.html" class="brand-logo">Walking Bus</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="schools.html">Schools</a></li>
+        <li class="active"><a href="index.html">Children</a></li>
+        <li><a href="routes.html">Routes</a></li>
+        <li>
+          <a class="dropdown-button" data-activates="user-dropdown" href="#!">
+            <i class="material-icons">perm_identity</i>
+          </a>
+        </li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="schools.html">Schools</a></li>
+        <li class="active"><a href="index.html">Children</a></li>
+        <li><a href="routes.html">Routes</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="target-schools">
+  </div>
+  <div id="target-children">
+  </div>
+
+  <div id="template-loading" hidden>
+  <div class="valign-wrapper" style="padding: 20%">
+  <div class="valign preloader-wrapper small active horiz-center">
+    <div class="spinner-layer spinner-blue-only">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div><div class="gap-patch">
+        <div class="circle"></div>
+      </div><div class="circle-clipper right">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <!-- Insert content here -->
+  <script id="template-schools" type="x-tmpl-mustache">
+  <div class="row">
+  <div class="input-field col s12">
+    <select>
+      <option value="" disabled selected>Choose your school</option>
+      {{#schools}}
+      <option value="{{key}}">{{name}}</option>
+      {{/schools}}
+    </select>
+    <label>School Select</label>
+  </div>
+  </div>
+  </script>
+
+  <script id="template-children" type="x-tmpl-mustache">
+  <div class="row">
+  <ul id="childlist" class="collapsible popout" data-collapsible="accordion"> 
+  {{#children}}
+    <li style="opacity: 0">
+      <div class="collapsible-header">{{name}}</div>
+      <div class="collapsible-body"><span>
+        Status: {{status}} <br />
+        Bluetooth: {{bluetooth}} <br />
+        <button class="btn waves-effect waves-light red" name="action">Remove
+          <i class="material-icons left">warning</i>
+        </button>
+
+      </span></div>
+    </li>
+  {{/children}}
+  </ul>
+  </div>
+  </script>
+
+
+  </div>
+  </div>
+</div>
+
+
+<!--  Scripts-->
+<script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA7TO3NVCj26NB8WJIcatlyLaoLCX7hHbM",
+    authDomain: "walkingbus-9b5dc.firebaseapp.com",
+    databaseURL: "https://walkingbus-9b5dc.firebaseio.com",
+    storageBucket: "walkingbus-9b5dc.appspot.com",
+    messagingSenderId: "316259890399"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/index.js"></script>
+<script src="js/wb.js"></script>
+</body>
+</html>
