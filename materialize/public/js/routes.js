@@ -1,3 +1,6 @@
+var directionsDisplay;
+var directionsService;
+
 var routes = {};
 
 var map_ready = false;
@@ -8,6 +11,7 @@ var current_marker = null;
 var parents = {};
 
 function initMap() {
+  directionsService = new google.maps.DirectionsService;
   loc = google.maps.LatLng;
   map_ready = true;
 
@@ -31,6 +35,8 @@ function createMap(school) {
       m.setMap(map);
     }
   }
+  directionsDisplay = new google.maps.DirectionsRenderer;
+  directionsDisplay.setMap(map);
 }
 
 function newRoute(pos) {
@@ -56,6 +62,24 @@ function newRoute(pos) {
   onMarkerChoice(prev_marker, current_marker);
 }
 
+function getDirections(marker, cb) { 
+  let request = {
+    origin: marker.position,
+    destination: {
+      lat: schools[school].lat,
+      lng: schools[school].lng
+    },
+    travelMode: 'WALKING',
+  };
+  directionsService.route(request, cb);
+}
+
+function plotPath(marker) { 
+  getDirections(marker, function(result, status) {
+    directionsDisplay.setDirections(result);
+  });
+}
+
 function createMarker(school_id, route) {
   let m = new google.maps.Marker({
     position: route.public.location,
@@ -76,6 +100,9 @@ function createMarker(school_id, route) {
       $("#lng").val(m.position.lng());
     }
   });
+  m.addListener('dragend', function() {
+    plotPath(m);
+  });
 
   markers[school_id].push(m);
   return m;
@@ -91,7 +118,7 @@ function loadRoute(school_id, route) {
   });
 }
 
-function saveRoute(marker, cb) {
+function saveRoute(marker, distance, cb) {
   let s = school;
   let route = marker.route;
   if (route._new_route) {
@@ -102,7 +129,7 @@ function saveRoute(marker, cb) {
   let r = {};
   for (let k in route) {
     if (!k.startsWith('_')) {
-      r[k] = route[k];
+      r[k] = JSON.parse(JSON.stringify(route[k]));
     }
   }
   r.public.location = {
@@ -111,7 +138,7 @@ function saveRoute(marker, cb) {
   }
   r.public.name = $("#name").val();
   r.public.time = $("#time").val();
-  console.log(JSON.stringify(r, 2, null));
+  r.public.distance = distance;
 
   let chosen_chap = $("#chaperone").val();
   let found = false;
@@ -129,24 +156,19 @@ function saveRoute(marker, cb) {
     return;
   }
 
+  console.log(route);
+
   let updates = {};
   updates['/routes/' + route._id] = r;
   updates['/schools/' + s + '/routes/' + route._id] = '1';
   for (let c in route.public.chaperones) {
+    console.log("Old Chap: " + c);
     updates['/users/' + c + '/routes/' + route._id] = null;
+    updates['/schools/' + s + '/chaperones/' + c] = null;
   }
   for (let c in r.public.chaperones) {
     updates['/users/' + c + '/routes/' + route._id] = '1';
-  }
-  for (let s in route.public.students) {
-    for (let c in  route.public.chaperones) {
-      updates['/students/' + s + '/chaperones/' + c] = null;
-    }
-  }
-  for (let s in r.private.students) {
-    for (let c in  r.public.chaperones) {
-      updates['/students/' + s + '/chaperones/' + c] = '1';
-    }
+    updates['/schools/' + s + '/chaperones/' + c] = '1';
   }
   console.log(JSON.stringify(updates, 2, null));
 
@@ -176,7 +198,7 @@ function removeRoute(marker, cb) {
   }
   for (let s in route.private.students) {
     for (let c in  route.public.chaperones) {
-      updates['/students/' + s + '/chaperones/' + c] = null;
+      updates['/students/' + s + '/routes/' + route._id] = null;
     }
   }
   
@@ -239,6 +261,7 @@ function onMarkerChoice(prev, current) {
   current.setAnimation(google.maps.Animation.BOUNCE);
   current.setDraggable(true);
 
+  plotPath(current);
   render_route(current.route);
 }
 
@@ -279,8 +302,12 @@ function render_route(route) {
   $('#save').click(function(e) {
     setTimeout(function() {
       button_loading($("#save"), function() { 
-        saveRoute(current_marker, function() {
-          button_loading_done($("#save"));
+        // Re-calculate distance of route before saving
+        getDirections(current_marker, function(result, status) {
+          let distance = result.routes[0].legs[0].distance.value.toString();
+          saveRoute(current_marker, distance, function() {
+            button_loading_done($("#save"));
+          });
         });
       });
     }, 300);

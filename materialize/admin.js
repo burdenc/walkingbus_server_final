@@ -34,8 +34,8 @@ admin.database().ref('students').on('value', function(data) {
             if (pa.hasChild('fcm')) {
               admin.messaging().sendToDevice(pa.child('fcm').val(), {
                 notification: {
-                  title: "Child is no longer lost!",
-                  body: students[student.key].name + " false alarm sorry about that."
+                  title: "Child is no longer lost",
+                  body: students[student.key].name + " has been found again."
                 }
               });
             }
@@ -52,8 +52,8 @@ admin.database().ref('students').on('value', function(data) {
             if (pa.hasChild('fcm')) {
               admin.messaging().sendToDevice(pa.child('fcm').val(), {
                 notification: {
-                  title: "Child is lost!",
-                  body: students[student.key].name + " is lost! Do something, call 9-1-1!!!"
+                  title: "Child is lost",
+                  body: students[student.key].name + " appears to be lost! Please check your surroundings and ensure their safety."
                 }
               });
             }
@@ -66,9 +66,11 @@ admin.database().ref('students').on('value', function(data) {
 });
 
 function resetStatuses() {
-  admin.database().ref('/students/').on('value', function(data) {
+  console.log('Resetting');
+  admin.database().ref('/students/').once('value', function(data) {
+    //console.log(student.key);
     data.forEach(function(student) {
-      console.log(student.key);
+      //console.log(student.key);
       admin.database().ref('/students/' + student.key + '/status').set('waiting');
     });
   });
@@ -87,11 +89,11 @@ function setCurrentTime() {
 }
 
 // At noon and midnight reset all student statuses to waiting
-var setStatuses = cron.schedule('30 * 0,12 * * *', function() {
+/*var setStatuses = cron.schedule('0 * 0,12 * * *', function() {
   resetStatuses();
   setCurrentTime();
-});
+});*/
 
-//resetStatuses();
+resetStatuses();
 setCurrentTime();
 //admin.messaging().sendToDevice(FCM, payload); 
