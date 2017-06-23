@@ -1,0 +1,727 @@
+{
+  "current_timeslot" : "wed_pm",
+  "routes" : {
+    "-KgkQPFXy7jm0lKJy-7p" : {
+      "private" : {
+        "status" : "waiting",
+        "students" : {
+          "fri_am" : {
+            "-KgxMtS2jsL_GmLNghsT" : "Android-A"
+          },
+          "mon_am" : {
+            "-Kgw3D4GTiGuSeQxM7Ay" : "Jessica Lin",
+            "-KhOBhGHMQgKPnmLVRLv" : "iOS D"
+          },
+          "mon_pm" : {
+            "-Kgw3D4GTiGuSeQxM7Ay" : "Jessica Lin"
+          },
+          "tue_am" : {
+            "-Kgw322XNQ0oXqeBwv_3" : "Sneha Shrotriya",
+            "-Kgw3D4GTiGuSeQxM7Ay" : "Jessica Lin"
+          },
+          "tue_pm" : {
+            "-Kgw3D4GTiGuSeQxM7Ay" : "Jessica Lin"
+          },
+          "wed_pm" : {
+            "-Kgw3TSgl2co4r10VJhn" : "Shruti Subramanian"
+          }
+        }
+      },
+      "public" : {
+        "chaperones" : {
+          "cLWwQaehxbRmTDZvUNi1KL88ENx2" : {
+            "code" : "123ABC",
+            "displayName" : "Ross McNulty",
+            "phone" : "(832) 585-2328",
+            "photoUrl" : "https://lh5.googleusercontent.com/-yXC-RxUJOFI/AAAAAAAAAAI/AAAAAAAAEc8/ZzgxFpKJXT0/s96-c/photo.jpg"
+          }
+        },
+        "location" : {
+          "lat" : 30.38562558120262,
+          "lng" : -97.75530240244677
+        },
+        "name" : "Pilot Test Route",
+        "school" : "school3",
+        "time" : "07:10"
+      }
+    },
+    "-KgrFqkPIMsNieZHcXJg" : {
+      "private" : {
+        "status" : "picked up",
+        "students" : {
+          "fri_am" : {
+            "-Kgw3D4GTiGuSeQxM7Ay" : "Jessica Lin",
+            "-Kgw3TSgl2co4r10VJhn" : "Shruti Subramanian"
+          },
+          "mon_am" : {
+            "-Kgw3TSgl2co4r10VJhn" : "Shruti Subramanian"
+          },
+          "mon_pm" : {
+            "-Kgw3TSgl2co4r10VJhn" : "Shruti Subramanian"
+          },
+          "tue_am" : {
+            "-Kgw3TSgl2co4r10VJhn" : "Shruti Subramanian"
+          },
+          "tue_pm" : {
+            "-Kgw322XNQ0oXqeBwv_3" : "Sneha Shrotriya",
+            "-Kgw3TSgl2co4r10VJhn" : "Shruti Subramanian"
+          },
+          "wed_am" : {
+            "-Kgw322XNQ0oXqeBwv_3" : "Sneha Shrotriya",
+            "-Kgw3D4GTiGuSeQxM7Ay" : "Jessica Lin",
+            "-Kgw3TSgl2co4r10VJhn" : "Shruti Subramanian"
+          },
+          "wed_pm" : {
+            "-Kgw3D4GTiGuSeQxM7Ay" : "Jessica Lin",
+            "-KifSPIcf45HuuoH9Mr8" : "John",
+            "-KifzEKf6DMq1Yn0lwoW" : "Smita"
+          }
+        }
+      },
+      "public" : {
+        "chaperones" : {
+          "dDoWPfNcBVZOlfjGRYCI7dM8Uex1" : {
+            "code" : "123ABC",
+            "displayName" : "Sneha Shrotriya",
+            "phone" : "5126984230",
+            "photoUrl" : "https://lh3.googleusercontent.com/-lvGuqICWkXw/AAAAAAAAAAI/AAAAAAAAAAA/ADPlhfKxqR0jw1U8E8M6yCDG6jrtpu0yCA/s96-c/photo.jpg"
+          }
+        },
+        "distance" : "1470",
+        "location" : {
+          "lat" : 30.375698330131176,
+          "lng" : -97.75279439985752
+        },
+        "name" : "Anderson High School",
+        "school" : "school3",
+        "time" : "7:15 am"
+      }
+    },
+    "-KgrLILWCrf4A3YVIymR" : {
+      "private" : {
+        "status" : "waiting",
+        "students" : {
+          "mon_am" : {
+            "-Kgw322XNQ0oXqeBwv_3" : "Sneha Shrotriya",
+            "-Kj0bC-PhYMXSOlj3rug" : "Cassidy Burden "
+          },
+          "mon_pm" : {
+            "-Kj0bC-PhYMXSOlj3rug" : "Cassidy Burden "
+          }
+        }
+      },
+      "public" : {
+        "chaperones" : {
+          "cLWwQaehxbRmTDZvUNi1KL88ENx2" : {
+            "code" : "1",
+            "displayName" : "Ross McNulty",
+            "phone" : "(832) 585-2328",
+            "photoUrl" : "https://lh5.googleusercontent.com/-yXC-RxUJOFI/AAAAAAAAAAI/AAAAAAAAEc8/ZzgxFpKJXT0/s96-c/photo.jpg"
+          }
+        },
+        "location" : {
+          "lat" : 30.294802026666794,
+          "lng" : -97.73403583463733
+        },
+        "name" : "Test Route",
+        "school" : "school4",
+        "time" : "12:00 am"
+      }
+    },
+    "-Khy5wEhLAh7BvdA2I9p" : {
+      "private" : {
+        "status" : "dropped off",
+        "students" : {
+          "mon_pm" : {
+            "-KiccJO6d6hCTOqLF_Ue" : "Dhrov Subramanian"
+          },
+          "wed_pm" : {
+            "-KifRdWPm9c5NsBnOzwf" : "test",
+            "-KifY9nu_yeK_Mxy_7WW" : "Aaron"
+          }
+        }
+      },
+      "public" : {
+        "chaperones" : {
+          "cLWwQaehxbRmTDZvUNi1KL88ENx2" : {
+            "code" : "ABC123",
+            "displayName" : "Ross McNulty",
+            "phone" : "(832) 585-2328",
+            "photoUrl" : "https://lh5.googleusercontent.com/-yXC-RxUJOFI/AAAAAAAAAAI/AAAAAAAAEc8/ZzgxFpKJXT0/s96-c/photo.jpg"
+          }
+        },
+        "distance" : "739",
+        "location" : {
+          "lat" : 30.29123728212118,
+          "lng" : -97.74155473722203
+        },
+        "name" : "Kerby",
+        "school" : "school1",
+        "time" : "12:30"
+      }
+    },
+    "-Khy60N5wE8iel2JzHar" : {
+      "private" : {
+        "status" : "waiting",
+        "students" : {
+          "tue_am" : {
+            "-KiccJO6d6hCTOqLF_Ue" : "Dhrov Subramanian"
+          },
+          "tue_pm" : {
+            "-KiccJO6d6hCTOqLF_Ue" : "Dhrov Subramanian"
+          },
+          "wed_am" : {
+            "-KiccJO6d6hCTOqLF_Ue" : "Dhrov Subramanian"
+          }
+        }
+      },
+      "public" : {
+        "chaperones" : {
+          "cLWwQaehxbRmTDZvUNi1KL88ENx2" : {
+            "code" : "ABC123",
+            "displayName" : "Ross McNulty",
+            "phone" : "(832) 585-2328",
+            "photoUrl" : "https://lh5.googleusercontent.com/-yXC-RxUJOFI/AAAAAAAAAAI/AAAAAAAAEc8/ZzgxFpKJXT0/s96-c/photo.jpg"
+          }
+        },
+        "location" : {
+          "lat" : 30.283028984150803,
+          "lng" : -97.73687696470006
+        },
+        "name" : "Jester",
+        "school" : "school1",
+        "time" : "11:00"
+      }
+    },
+    "-KifZTrakNzONcESRIO2" : {
+      "private" : {
+        "status" : "waiting"
+      },
+      "public" : {
+        "chaperones" : {
+          "5rSCNNx1ZnOEQMnCAehreGj0PCx2" : {
+            "code" : "Cockrell",
+            "displayName" : "Cassidy Burden",
+            "phone" : "",
+            "photoUrl" : "https://lh6.googleusercontent.com/-HRcbWA5WkKU/AAAAAAAAAAI/AAAAAAAAHb8/uNwgon3o9qk/photo.jpg"
+          }
+        },
+        "distance" : "551",
+        "location" : {
+          "lat" : 30.292515713664127,
+          "lng" : -97.73747348772304
+        },
+        "name" : "abc",
+        "school" : "school1",
+        "time" : "10:00"
+      }
+    }
+  },
+  "school_names" : {
+    "Cedar Ridge" : "school2",
+    "Cockrell" : "school1",
+    "Hill Elementary" : "school3",
+    "Tom Green" : "school4"
+  },
+  "schools" : {
+    "school1" : {
+      "admin" : {
+        "5rSCNNx1ZnOEQMnCAehreGj0PCx2" : 1,
+        "dDoWPfNcBVZOlfjGRYCI7dM8Uex1" : 1
+      },
+      "chaperones" : {
+        "5rSCNNx1ZnOEQMnCAehreGj0PCx2" : "1",
+        "cLWwQaehxbRmTDZvUNi1KL88ENx2" : "1"
+      },
+      "code" : "Cockrell",
+      "current_timeslot" : "mon_am",
+      "lat" : 30.289862,
+      "lng" : -97.735446,
+      "name" : "Cockrell",
+      "routes" : {
+        "-Khy5wEhLAh7BvdA2I9p" : "1",
+        "-Khy60N5wE8iel2JzHar" : "1",
+        "-KifZTrakNzONcESRIO2" : "1"
+      },
+      "students" : {
+        "-KiccJO6d6hCTOqLF_Ue" : "Dhrov Subramanian",
+        "-KifRdWPm9c5NsBnOzwf" : "test",
+        "-KifY9nu_yeK_Mxy_7WW" : "Aaron",
+        "-KifmYy-9ilRWQs_Uo9O" : "zfxgdjgjdgjg"
+      },
+      "users" : {
+        "5rSCNNx1ZnOEQMnCAehreGj0PCx2" : {
+          "code" : "Cockrell",
+          "displayName" : "Cassidy Burden",
+          "phone" : "",
+          "photoUrl" : "https://lh6.googleusercontent.com/-HRcbWA5WkKU/AAAAAAAAAAI/AAAAAAAAHb8/uNwgon3o9qk/photo.jpg"
+        },
+        "XStA75nQfJNMAm253I8HxBH3Gnh2" : {
+          "code" : "Cockrell",
+          "displayName" : "John Yu",
+          "phone" : "123456789",
+          "photoUrl" : "https://lh6.googleusercontent.com/-2J0K8ztLIGg/AAAAAAAAAAI/AAAAAAAAAEU/oZhI2GnCeUw/photo.jpg"
+        },
+        "cLWwQaehxbRmTDZvUNi1KL88ENx2" : {
+          "code" : "ABC123",
+          "displayName" : "Ross McNulty",
+          "phone" : "(832) 585-2328",
+          "photoUrl" : "https://lh5.googleusercontent.com/-yXC-RxUJOFI/AAAAAAAAAAI/AAAAAAAAEc8/ZzgxFpKJXT0/s96-c/photo.jpg"
+        },
+        "dDoWPfNcBVZOlfjGRYCI7dM8Uex1" : {
+          "code" : "ABC123",
+          "displayName" : "Sneha Shrotriya",
+          "phone" : "5126984231",
+          "photoUrl" : "https://lh3.googleusercontent.com/-lvGuqICWkXw/AAAAAAAAAAI/AAAAAAAAAAA/ADPlhfKxqR0jw1U8E8M6yCDG6jrtpu0yCA/s96-c/photo.jpg"
+        },
+        "seFA6JsWxJhJsYSCeVtoGgZmwNz2" : {
+          "code" : "Cockrell",
+          "displayName" : "Shruti Subramanian",
+          "phone" : "(512) 903-0264",
+          "photoUrl" : "https://lh3.googleusercontent.com/-DCqwXcFlROw/AAAAAAAAAAI/AAAAAAAAAAw/UYhS_pE4O_M/s96-c/photo.jpg"
+        }
+      }
+    },
+    "school2" : {
+      "admin" : {
+        "5rSCNNx1ZnOEQMnCAehreGj0PCx2" : 1,
+        "dDoWPfNcBVZOlfjGRYCI7dM8Uex1" : 1
+      },
+      "code" : "Cedar Ridge",
+      "lat" : 30.49301,
+      "lng" : -97.640331,
+      "name" : "Cedar Ridge",
+      "users" : {
+        "dDoWPfNcBVZOlfjGRYCI7dM8Uex1" : {
+          "code" : "Cedar Ridge",
+          "displayName" : "Sneha Shrotriya",
+          "phone" : "5126984230",
+          "photoUrl" : "https://lh3.googleusercontent.com/-lvGuqICWkXw/AAAAAAAAAAI/AAAAAAAAAAA/ADPlhfKxqR0jw1U8E8M6yCDG6jrtpu0yCA/s96-c/photo.jpg"
+        },
+        "seFA6JsWxJhJsYSCeVtoGgZmwNz2" : {
+          "code" : "Cedar Ridge",
+          "displayName" : "Shruti Subramanian",
+          "phone" : "(512) 903-0264",
+          "photoUrl" : "https://lh3.googleusercontent.com/-DCqwXcFlROw/AAAAAAAAAAI/AAAAAAAAAAw/UYhS_pE4O_M/s96-c/photo.jpg"
+        }
+      }
+    },
+    "school3" : {
+      "admin" : {
+        "5rSCNNx1ZnOEQMnCAehreGj0PCx2" : 1,
+        "cLWwQaehxbRmTDZvUNi1KL88ENx2" : 1,
+        "dDoWPfNcBVZOlfjGRYCI7dM8Uex1" : 1
+      },
+      "chaperones" : {
+        "dDoWPfNcBVZOlfjGRYCI7dM8Uex1" : "1"
+      },
+      "code" : "Hill Elementary",
+      "current_timeslot" : "mon_am",
+      "lat" : 30.376661,
+      "lng" : -97.748489,
+      "name" : "Hill Elementary",
+      "routes" : {
+        "-KgkQPFXy7jm0lKJy-7p" : "1",
+        "-KgrFqkPIMsNieZHcXJg" : "1"
+      },
+      "students" : {
+        "-Kgw322XNQ0oXqeBwv_3" : "Sneha Shrotriya",
+        "-Kgw3D4GTiGuSeQxM7Ay" : "Jessica Lin",
+        "-Kgw3TSgl2co4r10VJhn" : "Shruti Subramanian",
+        "-KifSPIcf45HuuoH9Mr8" : "John",
+        "-KifzEKf6DMq1Yn0lwoW" : "Smita"
+      },
+      "users" : {
+        "cLWwQaehxbRmTDZvUNi1KL88ENx2" : {
+          "code" : "123ABC",
+          "displayName" : "Ross McNulty",
+          "phone" : "(832) 585-2328",
+          "photoUrl" : "https://lh5.googleusercontent.com/-yXC-RxUJOFI/AAAAAAAAAAI/AAAAAAAAEc8/ZzgxFpKJXT0/s96-c/photo.jpg"
+        },
+        "dDoWPfNcBVZOlfjGRYCI7dM8Uex1" : {
+          "code" : "123ABC",
+          "displayName" : "Sneha Shrotriya",
+          "phone" : "5126984231",
+          "photoUrl" : "https://lh3.googleusercontent.com/-lvGuqICWkXw/AAAAAAAAAAI/AAAAAAAAAAA/ADPlhfKxqR0jw1U8E8M6yCDG6jrtpu0yCA/s96-c/photo.jpg"
+        },
+        "seFA6JsWxJhJsYSCeVtoGgZmwNz2" : {
+          "code" : "123ABC",
+          "displayName" : "Shruti Subramanian",
+          "phone" : "(512) 903-0264",
+          "photoUrl" : "https://lh3.googleusercontent.com/-DCqwXcFlROw/AAAAAAAAAAI/AAAAAAAAAAw/UYhS_pE4O_M/s96-c/photo.jpg"
+        },
+        "uNT82dHW8BXYAF25M8XvHjlU1Yu1" : {
+          "code" : "Hill Elementary",
+          "displayName" : "Sneha Sh",
+          "phone" : "(512) 698-4231",
+          "photoUrl" : "https://lh4.googleusercontent.com/-Tvx35DbROqg/AAAAAAAAAAI/AAAAAAAAAAA/7x5nZMFo5ec/s96-c/photo.jpg"
+        }
+      }
+    },
+    "school4" : {
+      "admin" : {
+        "5rSCNNx1ZnOEQMnCAehreGj0PCx2" : 1,
+        "cLWwQaehxbRmTDZvUNi1KL88ENx2" : 1,
+        "dDoWPfNcBVZOlfjGRYCI7dM8Uex1" : 1
+      },
+      "chaperones" : {
+        "cLWwQaehxbRmTDZvUNi1KL88ENx2" : "1",
+        "mKsL8QlHrUhj1LtmZ4m5ZuHE66u1" : "1"
+      },
+      "code" : "Tom Green",
+      "lat" : 30.293365,
+      "lng" : -97.734514,
+      "name" : "Tom Green",
+      "routes" : {
+        "-KgrLILWCrf4A3YVIymR" : "1"
+      },
+      "students" : {
+        "-Kj0bC-PhYMXSOlj3rug" : "Cassidy Burden "
+      },
+      "users" : {
+        "cLWwQaehxbRmTDZvUNi1KL88ENx2" : {
+          "code" : "1",
+          "displayName" : "Ross McNulty",
+          "phone" : "(832) 585-2328",
+          "photoUrl" : "https://lh5.googleusercontent.com/-yXC-RxUJOFI/AAAAAAAAAAI/AAAAAAAAEc8/ZzgxFpKJXT0/s96-c/photo.jpg"
+        },
+        "dDoWPfNcBVZOlfjGRYCI7dM8Uex1" : {
+          "code" : "1",
+          "displayName" : "Sneha Shrotriya",
+          "phone" : "5126984231",
+          "photoUrl" : "https://lh3.googleusercontent.com/-lvGuqICWkXw/AAAAAAAAAAI/AAAAAAAAAAA/ADPlhfKxqR0jw1U8E8M6yCDG6jrtpu0yCA/s96-c/photo.jpg"
+        },
+        "mKsL8QlHrUhj1LtmZ4m5ZuHE66u1" : {
+          "code" : "1",
+          "displayName" : "Jenny Plunkett",
+          "phone" : "1234567890",
+          "photoUrl" : "https://lh3.googleusercontent.com/-Dfr00pTnwOo/AAAAAAAAAAI/AAAAAAAAAic/kMNwqch_eGs/s96-c/photo.jpg"
+        }
+      }
+    }
+  },
+  "students" : {
+    "-Kgw322XNQ0oXqeBwv_3" : {
+      "bluetooth" : "",
+      "info" : "8C:04",
+      "name" : "Sneha Shrotriya",
+      "parents" : {
+        "dDoWPfNcBVZOlfjGRYCI7dM8Uex1" : {
+          "displayName" : "Sneha Shrotriya",
+          "phone" : "5126984231"
+        }
+      },
+      "photoUrl" : "https://firebasestorage.googleapis.com/v0/b/walkingbus-9b5dc.appspot.com/o/-Kgw322XNQ0oXqeBwv_3%2FphotoUrl?alt=media&token=1f0c666f-5109-44ff-8424-bf5c40c1a249",
+      "routes" : {
+        "mon_am" : "-KgrLILWCrf4A3YVIymR",
+        "tue_am" : "-KgkQPFXy7jm0lKJy-7p",
+        "tue_pm" : "-KgrFqkPIMsNieZHcXJg",
+        "wed_am" : "-KgrFqkPIMsNieZHcXJg"
+      },
+      "school" : "school3",
+      "status" : "waiting"
+    },
+    "-Kgw3D4GTiGuSeQxM7Ay" : {
+      "bluetooth" : "A0:E6:F8:AE:8C:04",
+      "info" : "8C:04",
+      "location" : {
+        "lat" : 30.28645725457956,
+        "lng" : -97.74132795640988
+      },
+      "name" : "Jessica Lin",
+      "parents" : {
+        "dDoWPfNcBVZOlfjGRYCI7dM8Uex1" : {
+          "displayName" : "Sneha Shrotriya",
+          "phone" : "5126984231"
+        }
+      },
+      "photoUrl" : "https://firebasestorage.googleapis.com/v0/b/walkingbus-9b5dc.appspot.com/o/-Kgw3D4GTiGuSeQxM7Ay%2FphotoUrl?alt=media&token=abf9818b-70e3-46e5-8fd2-0a12dd2aa7bd",
+      "routes" : {
+        "fri_am" : "-KgrFqkPIMsNieZHcXJg",
+        "mon_am" : "-KgkQPFXy7jm0lKJy-7p",
+        "mon_pm" : "-KgkQPFXy7jm0lKJy-7p",
+        "tue_am" : "-KgkQPFXy7jm0lKJy-7p",
+        "tue_pm" : "-KgkQPFXy7jm0lKJy-7p",
+        "wed_am" : "-KgrFqkPIMsNieZHcXJg",
+        "wed_pm" : "-KgrFqkPIMsNieZHcXJg"
+      },
+      "school" : "school3",
+      "status" : "waiting"
+    },
+    "-Kgw3TSgl2co4r10VJhn" : {
+      "bluetooth" : "A0:E6:F8:C2:5C:01",
+      "info" : "5C:01",
+      "location" : {
+        "lat" : 30.28966156834999,
+        "lng" : -97.73565987706168
+      },
+      "name" : "Shruti Subramanian",
+      "parents" : {
+        "dDoWPfNcBVZOlfjGRYCI7dM8Uex1" : {
+          "displayName" : "Sneha Shrotriya",
+          "phone" : "5126984231"
+        }
+      },
+      "photoUrl" : "https://firebasestorage.googleapis.com/v0/b/walkingbus-9b5dc.appspot.com/o/-Kgw3TSgl2co4r10VJhn%2FphotoUrl?alt=media&token=cf893fc0-c671-4bf2-956d-89e29e5dc955",
+      "routes" : {
+        "fri_am" : "-KgrFqkPIMsNieZHcXJg",
+        "mon_am" : "-KgrFqkPIMsNieZHcXJg",
+        "mon_pm" : "-KgrFqkPIMsNieZHcXJg",
+        "tue_am" : "-KgrFqkPIMsNieZHcXJg",
+        "tue_pm" : "-KgrFqkPIMsNieZHcXJg",
+        "wed_am" : "-KgrFqkPIMsNieZHcXJg",
+        "wed_pm" : "-KgkQPFXy7jm0lKJy-7p"
+      },
+      "school" : "school3",
+      "status" : "lost"
+    },
+    "-KiccJO6d6hCTOqLF_Ue" : {
+      "bluetooth" : "",
+      "info" : "Doesn't eat vegetables",
+      "name" : "Dhrov Subramanian",
+      "parents" : {
+        "dDoWPfNcBVZOlfjGRYCI7dM8Uex1" : {
+          "displayName" : "Sneha Shrotriya",
+          "phone" : "5126984231"
+        }
+      },
+      "photoUrl" : "https://firebasestorage.googleapis.com/v0/b/walkingbus-9b5dc.appspot.com/o/-KiccJO6d6hCTOqLF_Ue%2FphotoUrl?alt=media&token=21dc926e-9dd2-45ff-921b-179b4794fd89",
+      "routes" : {
+        "mon_pm" : "-Khy5wEhLAh7BvdA2I9p",
+        "tue_am" : "-Khy60N5wE8iel2JzHar",
+        "tue_pm" : "-Khy60N5wE8iel2JzHar",
+        "wed_am" : "-Khy60N5wE8iel2JzHar"
+      },
+      "school" : "school1",
+      "status" : "waiting"
+    },
+    "-KifRdWPm9c5NsBnOzwf" : {
+      "bluetooth" : "A0:E6:F8:AE:19:06",
+      "info" : "",
+      "location" : {
+        "lat" : 30.28631591,
+        "lng" : -97.74133047
+      },
+      "name" : "John Yu",
+      "parents" : {
+        "5rSCNNx1ZnOEQMnCAehreGj0PCx2" : {
+          "displayName" : "Cassidy Burden",
+          "phone" : "1234567890"
+        }
+      },
+      "routes" : {
+        "wed_pm" : "-Khy5wEhLAh7BvdA2I9p"
+      },
+      "school" : "school1",
+      "status" : "left behind"
+    },
+    "-KifSPIcf45HuuoH9Mr8" : {
+      "bluetooth" : "B0:B4:48:D2:E0:83",
+      "info" : "",
+      "name" : "John",
+      "parents" : {
+        "uNT82dHW8BXYAF25M8XvHjlU1Yu1" : {
+          "displayName" : "Sneha Sh",
+          "phone" : "(512) 698-4231"
+        }
+      },
+      "photoUrl" : "https://firebasestorage.googleapis.com/v0/b/walkingbus-9b5dc.appspot.com/o/-KifSPIcf45HuuoH9Mr8?alt=media&token=97e63803-2208-4b61-ae4b-c48541892081",
+      "routes" : {
+        "wed_pm" : "-KgrFqkPIMsNieZHcXJg"
+      },
+      "school" : "school3",
+      "status" : "waiting"
+    },
+    "-KifY9nu_yeK_Mxy_7WW" : {
+      "bluetooth" : "A0:E6:F8:B6:81:83",
+      "info" : "Allergic to bees",
+      "location" : {
+        "lat" : 30.29459218,
+        "lng" : -97.73379388
+      },
+      "name" : "Cassidy Burden",
+      "parents" : {
+        "XStA75nQfJNMAm253I8HxBH3Gnh2" : {
+          "displayName" : "John Yu",
+          "phone" : "123456789"
+        }
+      },
+      "photoUrl" : "https://firebasestorage.googleapis.com/v0/b/walkingbus-9b5dc.appspot.com/o/-KifY9nu_yeK_Mxy_7WW?alt=media&token=a2c5303a-ea2d-41e1-b01e-a22781d549c1",
+      "routes" : {
+        "wed_pm" : "-Khy5wEhLAh7BvdA2I9p"
+      },
+      "school" : "school1",
+      "status" : "dropped off"
+    },
+    "-KifmYy-9ilRWQs_Uo9O" : {
+      "bluetooth" : "",
+      "info" : "",
+      "name" : "zfxgdjgjdgjg",
+      "parents" : {
+        "cLWwQaehxbRmTDZvUNi1KL88ENx2" : {
+          "displayName" : "Ross McNulty",
+          "phone" : "(832) 585-2328"
+        }
+      },
+      "school" : "school1",
+      "status" : "waiting"
+    },
+    "-KifzEKf6DMq1Yn0lwoW" : {
+      "bluetooth" : "A0:E6:F8:AE:8C:04",
+      "info" : "",
+      "location" : {
+        "lat" : 30.28628060597022,
+        "lng" : -97.74126651705963
+      },
+      "name" : "Smita",
+      "parents" : {
+        "seFA6JsWxJhJsYSCeVtoGgZmwNz2" : {
+          "displayName" : "Shruti Subramanian",
+          "phone" : "(512) 903-0264"
+        }
+      },
+      "photoUrl" : "https://firebasestorage.googleapis.com/v0/b/walkingbus-9b5dc.appspot.com/o/-KifzEKf6DMq1Yn0lwoW%2FphotoUrl?alt=media&token=d2379267-ddf5-4895-b188-b3a5bec4f232",
+      "routes" : {
+        "wed_pm" : "-KgrFqkPIMsNieZHcXJg"
+      },
+      "school" : "school3",
+      "status" : "waiting"
+    },
+    "-Kj0bC-PhYMXSOlj3rug" : {
+      "bluetooth" : "A0:E6:F8:C2:5C:01",
+      "info" : "",
+      "name" : "Cassidy Burden ",
+      "parents" : {
+        "dDoWPfNcBVZOlfjGRYCI7dM8Uex1" : {
+          "displayName" : "Sneha Shrotriya",
+          "phone" : "5126984231"
+        }
+      },
+      "photoUrl" : "https://firebasestorage.googleapis.com/v0/b/walkingbus-9b5dc.appspot.com/o/-Kj0bC-PhYMXSOlj3rug%2FphotoUrl?alt=media&token=f254f558-34c9-4556-95ad-135366cc0ac8",
+      "routes" : {
+        "mon_am" : "-KgrLILWCrf4A3YVIymR",
+        "mon_pm" : "-KgrLILWCrf4A3YVIymR"
+      },
+      "school" : "school4",
+      "status" : "no route"
+    }
+  },
+  "users" : {
+    "5rSCNNx1ZnOEQMnCAehreGj0PCx2" : {
+      "displayName" : "Cassidy Burden",
+      "email" : "cassburden@gmail.com",
+      "fcm" : "e1iOGhMtBFM:APA91bGSKeYOni-6QTkFUKxZlXgKWAXYw-hWZICvNklyQuXQQhwcRIj9Y9h5L7QWtFdYB_TRosO9bfYtbszRh7MlY6kLiNlBewyq8-7KRBHqKOeF_mUoDTUlbgsPI2GES9PsbE5wX-es",
+      "phone" : "1234567890",
+      "photoUrl" : "https://lh6.googleusercontent.com/-HRcbWA5WkKU/AAAAAAAAAAI/AAAAAAAAHb8/uNwgon3o9qk/photo.jpg",
+      "routes" : {
+        "-KfgtngbgxRG-ng8JObU" : "1",
+        "-KfyD6CZAPaQDUHdjnr9" : "1",
+        "-KifZTrakNzONcESRIO2" : "1"
+      },
+      "schools" : {
+        "school1" : "1",
+        "school2" : "1",
+        "school3" : "1"
+      },
+      "schools_parent" : {
+        "school1" : "Cockrell"
+      },
+      "students" : {
+        "-KifRdWPm9c5NsBnOzwf" : "test"
+      }
+    },
+    "XStA75nQfJNMAm253I8HxBH3Gnh2" : {
+      "displayName" : "John Yu",
+      "email" : "john.yu95@gmail.com",
+      "fcm" : "ddqR2tw8nHw:APA91bEMzALkoMIdFNUyd_XDD4dyZrCf5ZZLeMxK4NaJw5mvz2QWDOzf-efBAvucEiRHkYjs5gJg03ET4MbuNo_bH0o6ypGo0e-6j1rg8IzrbWsoYhcOWzsqFGyxZxTGdE7V3FNN1GNy",
+      "phone" : "123456789",
+      "photoUrl" : "https://lh6.googleusercontent.com/-2J0K8ztLIGg/AAAAAAAAAAI/AAAAAAAAAEU/oZhI2GnCeUw/photo.jpg",
+      "schools_parent" : {
+        "school1" : "Cockrell"
+      },
+      "students" : {
+        "-KifY9nu_yeK_Mxy_7WW" : "Aaron"
+      }
+    },
+    "cLWwQaehxbRmTDZvUNi1KL88ENx2" : {
+      "displayName" : "Ross McNulty",
+      "email" : "ross.mcnulty.1@gmail.com",
+      "fcm" : "c3wP0IYtPnQ:APA91bHX2a5Jnk209k_5DvshOUhgQ0RxunBzFnm9BGDWcPnKcdO6JjRPVcH5zUU5UdsaoDje4vpuIUU2StuDLgpzPmr-KxNzwVk3aCV5cyU4edwOfNwVA10ZdkQeuOW81oG5nd2aDs7P",
+      "phone" : "(832) 585-2328",
+      "photoUrl" : "https://lh5.googleusercontent.com/-yXC-RxUJOFI/AAAAAAAAAAI/AAAAAAAAEc8/ZzgxFpKJXT0/s96-c/photo.jpg",
+      "routes" : {
+        "-Khy5wEhLAh7BvdA2I9p" : "1",
+        "-Khy60N5wE8iel2JzHar" : "1"
+      },
+      "schools" : {
+        "school3" : "1",
+        "school4" : "1"
+      },
+      "schools_parent" : {
+        "school1" : "Cockrell",
+        "school3" : "Hill Elementary",
+        "school4" : "Tom Green"
+      },
+      "students" : {
+        "-KifmYy-9ilRWQs_Uo9O" : "zfxgdjgjdgjg"
+      }
+    },
+    "dDoWPfNcBVZOlfjGRYCI7dM8Uex1" : {
+      "displayName" : "Sneha Shrotriya",
+      "email" : "snehashrotriya@utexas.edu",
+      "fcm" : "dHpKzFYDutg:APA91bG2Tk6_lU_szMxx9wj7SgbZvMMP48MPcbISPYaZeLw7IrcXElfWB72ADlkPbCCiazxtOHdEjcJxwI2jcKa9LjoUEVPdt4oAQ6tDwhczSwPH1iYi3inLzuLKhBebVu7qSup-r7aO",
+      "phone" : "5126984230",
+      "photoUrl" : "https://lh3.googleusercontent.com/-lvGuqICWkXw/AAAAAAAAAAI/AAAAAAAAAAA/ADPlhfKxqR0jw1U8E8M6yCDG6jrtpu0yCA/s96-c/photo.jpg",
+      "routes" : {
+        "-KgrFqkPIMsNieZHcXJg" : "1"
+      },
+      "schools" : {
+        "school1" : "1",
+        "school2" : "1",
+        "school3" : "1",
+        "school4" : "1"
+      },
+      "schools_parent" : {
+        "school1" : "Cockrell",
+        "school2" : "Cedar Ridge",
+        "school3" : "Hill Elementary",
+        "school4" : "Tom Green"
+      },
+      "students" : {
+        "-Kgw322XNQ0oXqeBwv_3" : "iOS-A",
+        "-Kgw3D4GTiGuSeQxM7Ay" : "iOS-B",
+        "-Kgw3TSgl2co4r10VJhn" : "iOS-C",
+        "-KiccJO6d6hCTOqLF_Ue" : "Dhrov Subramanian",
+        "-Kj0bC-PhYMXSOlj3rug" : "Cassidy Burden "
+      }
+    },
+    "seFA6JsWxJhJsYSCeVtoGgZmwNz2" : {
+      "displayName" : "Shruti Subramanian",
+      "email" : "shruti.subramanian@utexas.edu",
+      "fcm" : "dMROVx3SZQc:APA91bHQMkPK-HH4JFG4ttznly0oGTYdAX6rQC0WtRhSkuMZsZEH-TM_n3sdKGP1diWfngczL0uZTBy3ndQi3rqsoczs2HauFXZQAXQciki04BqBvTHVGRVKbU8Jpzypm9qFaViaDodd",
+      "phone" : "(512) 903-0264",
+      "photoUrl" : "https://lh3.googleusercontent.com/-DCqwXcFlROw/AAAAAAAAAAI/AAAAAAAAAAw/UYhS_pE4O_M/s96-c/photo.jpg",
+      "schools_parent" : {
+        "school1" : "Cockrell",
+        "school2" : "Cedar Ridge",
+        "school3" : "Hill Elementary"
+      },
+      "students" : {
+        "-KifzEKf6DMq1Yn0lwoW" : "Adeesh"
+      }
+    },
+    "uNT82dHW8BXYAF25M8XvHjlU1Yu1" : {
+      "displayName" : "Sneha Sh",
+      "email" : "sneha.snstar@gmail.com",
+      "fcm" : "cwdkoO6b8Sc:APA91bHx4WqOMTK9_A6hmK2puUCEkffQGn91PkYPQHpjR4mPa2QOxtcfc1T8pvlL7Dj7xlv0hFoD4dHCcXQiEQlS0btC7UEdV8vhG_mSMDy33MV70cFyJKODKccAuIILapeWJsH7f48M",
+      "phone" : "(512) 698-4231",
+      "photoUrl" : "https://lh4.googleusercontent.com/-Tvx35DbROqg/AAAAAAAAAAI/AAAAAAAAAAA/7x5nZMFo5ec/s96-c/photo.jpg",
+      "schools_parent" : {
+        "school3" : "Hill Elementary"
+      },
+      "students" : {
+        "-KifSPIcf45HuuoH9Mr8" : "John"
+      }
+    }
+  }
+}
