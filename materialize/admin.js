@@ -12,13 +12,6 @@ admin.initializeApp({
 
 var FCM = "fWkWeJEkgBs:APA91bGoa1gHI75UoOuildWGiMp1-X_04tf3UsurRUVe1W0h6_sZM58lyGBXVWcAchk_5pDXHXq9xHep1c4IV19_PnCLW4Snugjp9wRFHGV3Va_YhEJftw33OBqoPjMJM-goaFKHxf0n"
 
-var payload = {
-  notification: {
-    title: "Urgent action needed!",
-    body: "Urgent action is needed to prevent your account from being disabled!"
-  }
-};
-
 var students = {}
 admin.database().ref('students').on('value', function(data) {
   data.forEach(function (student) {
@@ -89,11 +82,10 @@ function setCurrentTime() {
 }
 
 // At noon and midnight reset all student statuses to waiting
-/*var setStatuses = cron.schedule('0 * 0,12 * * *', function() {
+var setStatuses = cron.schedule('* * 0,12 * * *', function() {
   resetStatuses();
   setCurrentTime();
-});*/
+});
 
 resetStatuses();
 setCurrentTime();
-//admin.messaging().sendToDevice(FCM, payload); 
