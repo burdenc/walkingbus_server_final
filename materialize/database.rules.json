@@ -1,0 +1,237 @@
+{
+  "rules": {
+    ".read": "auth.isAdmin == true",
+    ".write": "auth.isAdmin == true",
+    
+    "users" : {
+      "$uid" : {
+        ".read": "$uid === auth.uid",
+        ".write": "$uid === auth.uid",
+        /* validate used to have 'schools' and 'students'*/
+        ".validate" : "newData.hasChildren(['email', 'photoUrl', 'displayName', 'phone'])",  
+          
+        "phone" : {
+          ".read" : true
+        },
+          
+        "displayName" : {
+          ".read" : true
+        },
+        
+        "students" : {
+          "$student" : {
+            //".validate" : "newData.parent().parent().parent().parent().child('students').hasChild($student)"
+            //".validate" : true
+            /* Data: Student keys */
+          }
+        },
+        /* Schools this user is an admin of */
+        "schools" : {
+          "$school" : {
+            ".validate" : "root.child('schools').child($school).child('admin').hasChild($uid)"
+            /* Data: School keys */
+          }
+        },
+        /* Schools this user is an parent of */
+        "schools_parent" : {
+          "$school" : {
+            ".validate" : "root.child('schools').hasChild($school)"
+            /* Data: School keys */
+          }
+        },
+        "routes" : {
+          "$route" : {
+          	".write" : "newData.parent().parent().parent().parent().child('routes').hasChild($route) &&
+                        newData.parent().parent().child('schools_parent').hasChild(newData.parent().parent().parent().parent().child('routes').child($route).child('public').child('school').val()) &&
+                        newData.parent().parent().parent().parent().child('schools').child(newData.parent().parent().parent().parent().child('routes').child($route).child('public').child('school').val()).child('admin').hasChild(auth.uid)"
+          }
+        }
+      }
+    },
+      
+    "schools" : {
+      "$school" : {
+        ".write" : "data.child('admin').hasChild(auth.uid)",
+        //".read" : "data.child('admin').hasChild(auth.uid)",
+        ".read" : true,
+      	// previously validated for routes as well
+        ".validate": "newData.hasChildren(['admin', 'name', 'code'])",
+        
+        /* Admin of this school */
+      	"admin" : {
+					"$uid" : {
+            ".validate" : "root.child('users').hasChild($uid)"
+            /* Data: Admin keys */
+          }
+        },
+          
+        /* Students belonging to this school */
+        "students" : {
+          "$student" : {
+            ".write" : "(!newData.exists() && root.child('students').child($student).child('parents').hasChild(auth.uid)) || newData.parent().parent().parent().parent().child('students').child($student).child('parents').hasChild(auth.uid)"
+            /* Data: Student keys */
+          }
+        },
+        
+        "users" : {
+          "$user" : {
+            ".write" : "$user == auth.uid",
+            ".validate" : "newData.hasChildren(['displayName', 'photoUrl', 'code']) && newData.child('code').val() == root.child('schools').child($school).child('code').val()"
+          }
+        },
+          
+        "routes" : {
+          ".read" : "root.child('schools').child($school).child('users').hasChild(auth.uid)",
+          "$route" : {
+            ".validate" : "newData.parent().parent().parent().parent().child('routes').hasChild($route)"
+          }
+        }
+      }
+    },
+
+    "school_mapping" : {
+      "$mapping" : {
+        ".validate" : "newData.isString() && root.child('students').hasChild($mapping) && root.child('schools').hasChild(newData.val())",
+      }
+    },
+      
+    "school_names" : {
+      ".read": true,
+      ".write": true
+    },
+    
+    "current_timeslot" : {
+      ".read": true,
+      ".write": false
+    },
+      
+    "students" : {
+      "$student" : {
+        /* Only parent, admin for this student's school, or chaperones can read */
+        ".read": "data.child('parents').hasChild(auth.uid) || root.child('schools').child(data.child('school').val()).child('admin').hasChild(auth.uid) || root.child('routes').child(data.child('routes').child(root.child('current_timeslot').val()).val()).child('public').child('chaperones').hasChild(auth.uid)",
+        /* Can only write if creating new student, or is student's parent */
+        ".write": "!root.child('students').hasChild($student) || data.child('parents').hasChild(auth.uid)",
+          
+        "status" : {
+          ".write" : "root.child('routes').child(data.parent().child('routes').child(root.child('current_timeslot').val()).val()).child('public').child('chaperones').hasChild(auth.uid)"
+        },  
+        "location" : {
+          ".write" : "root.child('routes').child(data.parent().child('routes').child(root.child('current_timeslot').val()).val()).child('public').child('chaperones').hasChild(auth.uid)"
+        },  
+          
+        /* Parents of this student */
+        "parents" : {
+          "$parent" : {
+          	".validate" : "root.child('users').hasChild($parent) && newData.hasChildren(['displayName', 'phone'])"
+            /* Data: Parent keys */
+          }
+        },
+        
+        /* School this student goes to */
+        "school" : {
+          ".validate" : "root.child('schools').hasChild(newData.val())"
+            /* Data: School key */
+        },
+          
+        /* Chaperones of this student */
+        "chaperones" : {
+          "$chaperone" : {
+            ".validate" : "root.child('users').hasChild($chaperone)"
+            /* Data: Chaperone keys */
+          }
+        },
+        
+        "routes" : {
+          "$time" : {
+            ".validate" : "($time == 'mon_am' || $time == 'mon_pm' ||
+                            $time == 'tue_am' || $time == 'tue_pm' ||
+                            $time == 'wed_am' || $time == 'wed_pm' ||
+                            $time == 'thu_am' || $time == 'thu_pm' ||
+                            $time == 'fri_am' || $time == 'fri_pm')"
+          }
+        }
+      }
+    },
+      
+    "route_lookup" : {
+      "school" : {
+        "$school" : {
+          ".read" : "root.child('schools').child('admin').hasChild(auth.uid) || root.child('schools').child('users').hasChild(auth.uid)",
+          ".write" : "root.child('schools').child('admin').hasChild(auth.uid) || root.child('schools').hasChild($school)",
+          ".validate" : "root.child('schools').hasChild($school)",
+          "$time" : {
+            ".validate" : "($time == 'MON_AM' || $time == 'MON_PM' ||
+                            $time == 'TUE_AM' || $time == 'TUE_PM' ||
+                            $time == 'WED_AM' || $time == 'WED_PM' ||
+                            $time == 'THU_AM' || $time == 'THU_PM' ||
+                            $time == 'FRI_AM' || $time == 'FRI_PM') &&
+                            newData.parent().parent().parent().parent().child('routes').hasChild(newData.val())"
+          }
+        }
+      }
+    },
+    
+    "routes": {
+      "$route" : {
+        /* Only school admin and chaperone can read route info */
+        ".read" : "data.child('public').child('chaperones').hasChild(auth.uid) || root.child('schools').child(data.child('public').child('school').val()).child('admin').hasChild(auth.uid)",
+        /* Only school admin can edit route info */
+        ".write" : "data.child('public').child('chaperones').hasChild(auth.uid) || (!data.exists() && root.child('schools').child(newData.child('public').child('school').val()).child('admin').hasChild(auth.uid)) || root.child('schools').child(data.child('public').child('school').val()).child('admin').hasChild(auth.uid) || (data.val() == null && root.child('schools').child(newData.child('public').child('school').val()).child('admin').hasChild(auth.uid))",
+        ".validate" : "newData.hasChildren(['public', 'private'])",
+
+        "private" : {
+          "status" : {
+            ".read": true,
+            ".write" : true
+          },
+          "students" : {
+            "$time" : {
+              ".validate" : "($time == 'mon_am' || $time == 'mon_pm' ||
+                              $time == 'tue_am' || $time == 'tue_pm' ||
+                              $time == 'wed_am' || $time == 'wed_pm' ||
+                              $time == 'thu_am' || $time == 'thu_pm' ||
+                              $time == 'fri_am' || $time == 'fri_pm')",
+              "$student" : {
+                ".write" : "root.child('students').child($student).child('parents').hasChild(auth.uid)",
+                ".validate" : "root.child('students').hasChild($student)"
+              }
+            }
+          },
+        },
+        "public" : {
+          ".read" : "root.child('schools').child(data.child('school').val()).child('users').hasChild(auth.uid)",
+          "name" : {
+            ".read": true
+          },
+          "school" : {
+            ".validate" : "root.child('schools').hasChild(newData.val())"
+          },
+          "chaperones" : {
+            "$chaperone" : {
+            	".validate" : "newData.hasChildren(['displayName', 'phone', 'photoUrl'])"
+            }
+          },
+          "location" : {
+            "lat" : {
+              ".validate" : "newData.isNumber()"
+            },
+            "lng" : {
+              ".validate" : "newData.isNumber()"
+            }
+          },
+          "distance" : {
+            /* Number of meters between school location and route start location */
+            ".read" : true
+          },
+          "time" : {
+            ".read" : true
+          }
+        },
+        "$other" : { ".validate" : false }
+      }
+    },
+
+    "$other": { ".validate": false }
+    }
+}
+
